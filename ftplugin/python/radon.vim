@@ -7,7 +7,7 @@
 if !has('signs')
     finish
 endif
-if !has('python')
+if !has('python3')
     finish
 endif
 
@@ -28,7 +28,7 @@ function! s:ToggleRadon()
     endif
 endfunction
 
-python << endpython
+python3 << endpython
 import vim
 import os
 import ast
@@ -210,7 +210,7 @@ def update_line_markers(line_changes):
 endpython
 
 function! s:ShowRadon()
-    python << END
+    python3 << END
 show_radon()
 END
     let g:radon_is_displaying = 1
